@@ -42,12 +42,13 @@ public class CardDeliveryOrderFormsTest {
         if (!generateDate(0, "MM").equals(generateDate(10, "MM"))) {
             $(".input__icon").click();
             $("[data-step='1']").click();
+            $$(".calendar__day").findBy(Condition.text(generateDate(10, "dd"))).click();
 
         } else {
             $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
             $("[data-test-id='date'] input").setValue(planningDate);
         }
-        $$(".calendar__day").findBy(Condition.text(generateDate(10, "dd"))).click();
+
         $("[data-test-id='name'] input").setValue("Надежда Ворон-Тарасова");
         $("[data-test-id='phone'] input").setValue("+71999999999");
         $("[data-test-id='agreement']").click();
