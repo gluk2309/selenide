@@ -43,7 +43,7 @@ public class CardDeliveryOrderFormsTest {
         if (!generateDate(3, "MM").equals(generateDate(10, "MM"))) {
             $("[data-step='1']").click();
         }
-        $$(".calendar__day").findBy(Condition.text(generateDate(10, "dd.MM.yyyy"))).click();
+        $$(".calendar__day").findBy(Condition.text(generateDate(10, "6"))).click();
         $("[data-test-id='name'] input").setValue("Надежда Ворон-Тарасова");
         $("[data-test-id='phone'] input").setValue("+71999999999");
         $("[data-test-id='agreement']").click();
